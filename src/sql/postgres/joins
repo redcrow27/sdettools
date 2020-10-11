@@ -74,3 +74,9 @@ ON friends.friend_id = pets.owner_id;
 -- in the the first table multipled by the number of rows in the second table.
 SELECT * FROM friends
 CROSS JOIN pets;
+
+-- Query the name and the animal type for Rachel
+select friend_name, pet_type, pet_name from friends
+inner join pets
+ON friends.friend_id = pets.owner_id
+where friend_name = 'Rachel';
